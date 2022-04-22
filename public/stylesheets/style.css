@@ -65,7 +65,7 @@ h3 {
 }
 
 #username {
-    color: white;
+    color: black;
 }
 
 #password {
@@ -74,4 +74,16 @@ h3 {
 
 #email {
     color: white;
+}
+
+#userUsername {
+    color: black;
+}
+
+#userPassword {
+    color: black;
+}
+
+#userEmail {
+    color: black;
 }
