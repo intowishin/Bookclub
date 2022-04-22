@@ -1,26 +1,48 @@
 <h2>Edit Profile</h2>
 
-<form action="/user/edit-user" method="POST" enctype="multipart/form-data">
-    <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" value="{{userInSession.username}}">
+<form action='/user/edit-user' method='POST' enctype='multipart/form-data'>
+    <div class='form-group'>
+        <label for='userUsername'>Username</label>
+        <input
+            type='text'
+            class='form-control'
+            id='userUsername'
+            name='username'
+            value='{{userInSession.username}}'
+        />
     </div>
-    <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" name="email" value="{{userInSession.email}}">
+    <div class='form-group'>
+        <label for='userEmail'>Email address</label>
+        <input
+            type='email'
+            class='form-control'
+            id='userEmail'
+            name='email'
+            value='{{userInSession.email}}'
+        />
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" name="password">
+    <div class='form-group'>
+        <label for='userPassword'>Password</label>
+        <input
+            type='password'
+            class='form-control'
+            id='userPassword'
+            name='password'
+        />
     </div>
-    <div class="form-group">
-        <label for="profile-picture">Profile picture</label>
-        <input type="file" class="form-control" id="profile-picture" name="profile-picture">
+    <div class='form-group'>
+        <label for='profile-picture'>Profile picture</label>
+        <input
+            type='file'
+            class='form-control'
+            id='profile-picture'
+            name='profile-picture'
+        />
     </div>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type='submit' class='btn btn-primary'>Submit</button>
 </form>
 
-<form action="/user/delete-user" method="POST">
-    <button type="submit" class="btn btn-danger">Delete profile</button>
+<form action='/user/delete-user' method='POST'>
+    <button type='submit' class='btn btn-danger'>Delete profile</button>
 </form>
