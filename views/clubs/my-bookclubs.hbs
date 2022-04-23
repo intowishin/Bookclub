@@ -1,16 +1,18 @@
-<h2>My Bookclubs</h2>
+<br>
+<h2>My Bookclubs</h2> <br>
+
 <form action="create-bookclub" method="GET">
-<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#create-bookclub">
+<button type='submit' class="btn btn-outline-dark btn-sm" type="submit" data-toggle="modal" data-target="#create-bookclub">
     Create a Bookclub
 </button>
 </form>
 
 {{#each bookclubs}}
-<div class="card mb-3">
-    <div class="card-body">
-        <h5 class="card-title">{{name}}</h5>
-        <p class="card-text">{{book}}</p>
-        <a href="bookclub-details/{{id}}" class="btn btn-primary">View</a>
-    </div>
+<div class="card">
+  <h5 class="card-header">{{name}}</h5>
+  <div class="card-body">
+    <h6 class="card-title">{{book}}</h6>
+<a href="bookclub-details/{{id}}" class="btn btn-outline-dark btn-sm">View</a>  </div>
 </div>
 {{/each}}
+

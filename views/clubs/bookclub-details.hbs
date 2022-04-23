@@ -1,16 +1,16 @@
-<div class="card mb-3">
-    <div class="card-body">
-        <h5 class="card-title">{{bookclub.name}}</h5>
-        <h6 class="card-text">{{bookclub.book}}</h6>
-        <p class="card-text">{{bookclub.description}}</p>
-
-
-        <div class="mb-3">
+<br>
+    <div class="card">
+  <h5 class="card-header">{{bookclub.name}}</h5>
+  <div class="card-body">
+    <h6 class="card-title">{{bookclub.book}}</h6>
+    <p class="card-text">{{bookclub.description}}</p>
+    <div class="mb-3">
             <form action="/clubs/edit-bookclub/{{bookclub._id}}" method="GET">
-                <button type="submit" class="btn btn-primary">Edit</button>
+                <button type="submit" class="btn btn-outline-dark">Edit</button>
             </form>
             <form action="/clubs/{{bookclub._id}}/delete-bookclub" method="POST">
-                <button type="submit" class="btn btn-danger">Delete</button>
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
             </form>
         </div>
-    </div>
+  </div>
+</div>
