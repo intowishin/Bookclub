@@ -24,8 +24,13 @@ router.post('/my-books', async (req, res, next) => {
     try {
         const user = await User.findById(req.session.currentUser._id);
         const book = { id: bookId, authors, title, image };
-        user.myBooks.push(book);
-        await user.save()
+
+        // Save the book to the user's library if it's not already there
+        if (! user.myBooks.some((myBook) => bookId === myBook.id)) {
+            user.myBooks.push(book);
+            await user.save();
+        }
+
         res.redirect('/books/my-books')
     } catch (e) {
         console.error(e);
