@@ -13,82 +13,50 @@
 <body>
     <header class='mb-3'>
 
-        <nav class='navbar fixed-top navbar-expand-lg navbar-dark bg-dark'>
-            <div class='container-fluid'>
-                <a class='navbar-brand' href='/'>{{appTitle}}<span>📚</span></a>
-                <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav'
-                    aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
-                    <span class='navbar-toggler-icon'></span>
-                </button>
-                <div class='collapse navbar-collapse' id='navbarNav'>
-                    <ul class='navbar-nav'>
-                        {{#if userInSession}}
-                        <li class='nav-item'>
-                            <a class='nav-link active' href='/profile'>My Profile</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/books/my-books'>My Books</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/clubs/my-bookclubs'>My Bookclubs</a>
-                        </li>
-
-                        {{else}}
-                        <div id='signup' hidden>
-                            <h3 id="h3Signup">Sign up:</h3>
-                        <form action='/auth/signup' method='POST'>
-                            <label id='username'>
-                                Username
-                                <input type='text' name='username' />
-                            </label>
-                            <label id='email'>
-                                Email
-                            <input type='text' name='email' />
-                            </label>
-                            <label id='password'>
-                                Password
-                                <input type='password' name='password' />
-                            </label>
-
-                        <button type='submit'>Submit</button>
-                        </form>
-                            <a id="aSignup" href='#' onclick='switchForm(event)'>Login</a>
-                        </div>
-
-                        <div id='login'>
-                            <h3>Login:</h3>
-                        <form action='/auth/login' method='POST'>
-                            <label id='username'>
-                                Username
-                                <input type='text' name='username' />
-                            </label>
-                            <label id='password'>
-                                Password
-                                <input type='password' name='password' />
-                            </label>
-
-                            <button type='submit'>Submit</button>
-                            </form>
-                            <a id="aLogin" href='#' onclick='switchForm(event)'>Signup</a>
-                        </div>
-
-                        {{/if}}
-                        <li class='nav-item' >
-                            <a class='nav-link' href='/details'>How It Works</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/contact'>Contact Us</a>
-                        </li>
-                        {{#if userInSession}}
-                        <li class='nav-item'>
-                            <a class='nav-link' href='/auth/logout'>Logout</a>
-                        </li>
-                        {{/if}}
-                    </ul>
-                    </div>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class='navbar-brand' href='/'>{{appTitle}}<span>📚</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {{#if userInSession}}
+                <li class="nav-item">
+                    <a class='nav-link active' href='/profile'>My Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class='nav-link' href='/books/my-books'>My Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class='nav-link' href='/clubs/my-bookclubs'>My Bookclubs</a>
+                </li>
+                {{/if}}
+            </ul>
+            <form action='/books/searched-book' method='GET'>
+                <label for='searchTerm'></label>
+                <div class='input-group'>
+                    <input class="form-control form-control-sm" type='text' name='searchTerm'
+                        class='form-control rounded' placeholder='Search...' aria-label='Search' />
+                    <br>
+                    <button type='' class="btn btn-outline-dark btn-sm">search</button>
                 </div>
-            </div>
-        </nav>
+            </form>
+        </div>
+        <ul class="nav justify-content-end" class="text-secondary">
+            <li class="nav-item" >
+                <a class="nav-link" href='/contact'>Contact Us</a>
+            </li>
+            {{#if userInSession}}
+            <li class="nav-item">
+                <a class="nav-link" href='/auth/logout'>Logout</a>
+            </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
+
 
     </header>
 

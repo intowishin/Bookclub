@@ -1,3 +1,23 @@
-<h1>My Books</h1>
+<h1>My Books</h1> <br>
 
-{{!-- show users books here --}}
+{{#each books}}
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0" class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col-md-4">
+      <img src="{{this.image}}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Title: {{this.title}}</h5>
+        <h6 class="card-text">Authors: {{this.authors}}</h6> 
+        <br>
+        <form action="/books/delete-book" method="POST">
+    <input type="hidden" name="bookId" value="{{this.id}}">
+    <button type='submit' class="btn btn-outline-danger">Remove from my books</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}
+

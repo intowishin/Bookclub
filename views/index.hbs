@@ -1,23 +1,9 @@
-<form action='/books/searched-book' method='GET'>
-    <label for='searchTerm'></label>
-    <div class='input-group'>
-        <input
-            type='text'
-            name='searchTerm'
-            class='form-control rounded'
-            placeholder='Search for a book'
-            aria-label='Search'
-            aria-describedby='search-addon'
-        />
-        <button type='' class='btn btn-outline-primary'>search</button>
-    </div>
-</form>
 
 {{#if errorMessage}}
     <div class='alert alert-danger'>{{errorMessage}}</div>
 {{/if}}
-
-{{! <div id='signup' hidden>
+<br>
+<div id='signup' hidden>
         <h3>Sign up</h3>
         <form action='/auth/signup' method='POST'>
             <label>
@@ -33,12 +19,12 @@
                 <input type='password' name='password' />
             </label>
 
-            <button type='submit'>Submit</button>
+            <button type='submit' class="btn btn-outline-dark btn-sm" type='submit'>Submit</button>
         </form>
         <a href='#' onclick='switchForm(event)'>Login</a>
-    </div> }}
+    </div>
 
-{{! <div id='login'>
+ <div id='login'>
     <h3>Login</h3>
     <form action='/auth/login' method='POST'>
         <label>
@@ -50,7 +36,9 @@
             <input type='password' name='password' />
         </label>
 
-        <button type='submit'>Submit</button>
+        <button type='submit' class="btn btn-outline-dark btn-sm" type='submit'>Submit</button>
     </form>
     <a href='#' onclick='switchForm(event)'>Signup</a>
-</div> }}
+</div>
+
+

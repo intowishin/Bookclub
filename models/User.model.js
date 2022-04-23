@@ -18,7 +18,12 @@ const userSchema = new Schema(
                 'https://res.cloudinary.com/dticyzm8v/image/upload/v1650121606/profile-picture2_lpzldl.jpg',
         },
         myBooks: {
-            type: [{ Array }],
+            type: [{
+                id: String,
+                title: String,
+                authors: String,
+                image: String
+            }],
         },
     },
     {

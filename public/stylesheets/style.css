@@ -1,32 +1,32 @@
 body {
     padding: 50px;
-    font: 14px Georgia, 'Times New Roman', Times, serif;
-}
+    /* font: 14px Georgia, 'Times New Roman', Times, serif; */
+} 
 
-a {
+/* a {
     color: #00b7ff;
-}
+} */
 
-h1 {
+/* h1 {
     color: 15px;
-}
+} */
 
-#signup {
+/* #signup {
     position: absolute;
     top: 1px;
     left: 610px;
     top: 16px;
 }
 
-#login {
+/* #login {
     position: absolute;
     /* top: 1px; */
-    left: 810px;
+    /* left: 810px;
     top: 16px;
-}
+} */ 
 
 h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: rgb(158, 157, 157);
     position: absolute;
     left: -57px;
@@ -34,9 +34,9 @@ h3 {
     font-size: medium;
 }
 
-#h3Signup {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(158, 157, 157);
+/* #h3Signup {
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* color: rgb(158, 157, 157);
     position: absolute;
     left: -70px;
     font-size: medium;
@@ -46,8 +46,8 @@ h3 {
     position: absolute;
     top: 1px;
     left: -462px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* font-size: 15px;
     color: rgb(158, 157, 157);
 }
 
@@ -55,10 +55,10 @@ h3 {
     position: absolute;
     top: 1px;
     left: -265px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(158, 157, 157);
-    font-size: 15px;
-}
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* color: rgb(158, 157, 157);
+    font-size: 15px; */
+} */ */ */
 
 #welcome {
     color: black;
