@@ -20,10 +20,11 @@ router.get('/searched-book', (req, res, next) => {
 });
 
 router.post('/my-books', async (req, res, next) => {
-    const { bookId } = req.body;
+    const { bookId, authors, title, image } = req.body;
     try {
         const user = await User.findById(req.session.currentUser._id);
-        user.myBooks.push(bookId);
+        const book = { id: bookId, authors, title, image };
+        user.myBooks.push(book);
         await user.save()
         res.redirect('/books/my-books')
     } catch (e) {
