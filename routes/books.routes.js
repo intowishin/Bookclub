@@ -50,8 +50,17 @@ router.get("/my-books", (req, res, next) => {
     });
 });
 
-// router.post("/delete-book", (req, res, next) => {
-
-// })
+router.post("/delete-book", (req, res, next) => {
+  const { bookId } = req.body;
+  User.findById(req.session.currentUser._id)
+    .then((user) => {
+      user.myBooks = user.myBooks.filter((book) => book.id !== bookId);
+      user.save();
+      res.redirect("/books/my-books");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 module.exports = router;
